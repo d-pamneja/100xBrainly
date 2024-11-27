@@ -7,6 +7,7 @@ import passport from 'passport'
 import './middlewares/passport'
 import morgan from "morgan"
 import cors from "cors";
+import serverless from 'serverless-http';
 
 import dotenv from 'dotenv'; 
 dotenv.config()
@@ -31,6 +32,8 @@ app.use(express.json())
 app.use(morgan("dev"));
 app.use(cookieParser(process.env.COOKIE_SECRET));
 app.use('/',appRouter)
+
+module.exports.handler = serverless(app); 
 
 // Export the app
 export default app
