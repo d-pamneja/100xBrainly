@@ -1,6 +1,6 @@
 import { Strategy as GoogleStrategy } from 'passport-google-oauth20';
 import { Strategy as GithubStrategy } from 'passport-github2';
-import { UserModel } from '../../src/db/model';
+import { UserModel } from '../../db/model';
 import passport from 'passport';
 import bcrypt from 'bcrypt'
 import dotenv from 'dotenv'; 

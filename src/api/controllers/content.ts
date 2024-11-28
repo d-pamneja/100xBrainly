@@ -1,4 +1,4 @@
-import { ContentModel,LinkModel,TagModel,UserModel } from "../../src/db/model";
+import { ContentModel,LinkModel,TagModel,UserModel } from "../../db/model";
 import { Request,Response } from "express";
 import mongoose from 'mongoose';
 
