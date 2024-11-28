@@ -5,6 +5,5 @@
         "src": "/(.*)",
         "dest": "dist/index.js"
       }
-    ],
-    "outputDirectory" : "src"
+    ]
   }
