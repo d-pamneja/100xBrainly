@@ -6,8 +6,6 @@ import session from 'express-session';
 import passport from 'passport'
 import './api/middlewares/passport'
 import cors from "cors";
-import serverless from 'serverless-http';
-import {connect} from "mongoose";
 
 import dotenv from 'dotenv'; 
 dotenv.config()
@@ -32,12 +30,5 @@ app.use(express.json())
 app.use(cookieParser(process.env.COOKIE_SECRET));
 app.use('/',appRouter)
 
-// Connect to MongoDB first
-connect(process.env.MONGODB_URI!)
-  .then(() => {
-    console.log("Server set and connected to MongoDB.");
-  })
-  .catch((err) => console.log("MongoDB connection error: ", err));
-  
-module.exports.handler = serverless(app);
+
 export default app;
