@@ -10,7 +10,8 @@ const share_1 = __importDefault(require("./share"));
 const auth_1 = __importDefault(require("./auth"));
 const appRouter = (0, express_1.Router)();
 appRouter.get('/', (req, res) => {
-    res.status(200).json({ message: "Hello from 100xBrainly Backend!" });
+    console.log("Trial");
+    res.status(200).send("Trial");
 });
 appRouter.use('/user', user_1.default);
 appRouter.use('/content', content_1.default);
