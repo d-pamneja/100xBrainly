@@ -5,6 +5,7 @@
         "src": "/api/(.*)", 
         "dest": "/dist/api/$1"
       }
-    ]
+    ],
+    "outputDirectory": ""
   }
   
