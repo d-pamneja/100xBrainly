@@ -39,7 +39,7 @@ thridPartyRouter.get(
       const expires = new Date(Date.now() + expiresInMilliseconds);
 
       res.cookie(COOKIE_NAME, token, {
-          path: "/",
+          domain: "https://100x-brainly.vercel.app",
           expires,
           signed: true,
           secure: true
@@ -83,7 +83,7 @@ thridPartyRouter.get(
       const expires = new Date(Date.now() + expiresInMilliseconds);
 
       res.cookie(COOKIE_NAME, token, {
-          path: "/",
+          domain: "https://100x-brainly.vercel.app",
           expires,
           signed: true,
           secure: true

@@ -60,7 +60,7 @@ const login = async function (req, res) {
             const expiresInMilliseconds = 7 * 24 * 60 * 60 * 1000;
             const expires = new Date(Date.now() + expiresInMilliseconds);
             res.cookie(constants_1.COOKIE_NAME, token, {
-                path: "/",
+                domain: "https://100x-brainly.vercel.app",
                 expires,
                 signed: true,
                 secure: true
