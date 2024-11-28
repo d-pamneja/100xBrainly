@@ -11,7 +11,7 @@ export const auth =  (
     next : NextFunction
 ) =>{
     try{
-        const requestAuthorization = req.signedCookies[`${COOKIE_NAME}`];
+        const requestAuthorization = req.cookies[`${COOKIE_NAME}`];
         const decodedInfo = jwt.verify(requestAuthorization as any,JWT_SECRET as any)
 
         if(!decodedInfo){
