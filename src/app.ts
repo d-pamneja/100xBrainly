@@ -1,10 +1,10 @@
 import express from 'express'
 import {config} from "dotenv";
-import appRouter from './routes';
+import appRouter from '../api/routes';
 import cookieParser from "cookie-parser";
 import session from 'express-session';
 import passport from 'passport'
-import './middlewares/passport'
+import '../api/middlewares/passport'
 import cors from "cors";
 import serverless from 'serverless-http';
 

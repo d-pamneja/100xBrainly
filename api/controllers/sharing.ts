@@ -1,5 +1,5 @@
 import { Request,Response,NextFunction } from "express";
-import { ContentModel, LinkModel, UserModel } from "../db/model";
+import { ContentModel, LinkModel, UserModel } from "../../src/db/model";
 import mongoose from "mongoose";
 import jwt from 'jsonwebtoken';
 import dotenv from 'dotenv'; 
