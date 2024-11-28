@@ -1,4 +1,3 @@
 # Ignore Files
 node_modules
-dist
 .env
