@@ -33,6 +33,4 @@ app.use(cookieParser(process.env.COOKIE_SECRET));
 app.use('/',appRouter)
 
 
-
-module.exports.handler = serverless(app);
 export default app;
