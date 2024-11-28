@@ -7,7 +7,6 @@ import thridPartyRouter from "./auth";
 const appRouter = Router()
 
 appRouter.get('/', (req, res) => {
-    console.log("Trial")
     res.status(200).send("Trial");
 });
 appRouter.use('/user',userRouter)

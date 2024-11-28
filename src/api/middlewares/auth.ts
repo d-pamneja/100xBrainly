@@ -12,7 +12,9 @@ export const auth =  (
 ) =>{
     try{
         const requestAuthorization = req.signedCookies[`${COOKIE_NAME}`];
+        console.log(requestAuthorization)
         const decodedInfo = jwt.verify(requestAuthorization as any,JWT_SECRET as any)
+        console.log(decodedInfo)
 
         if(!decodedInfo){
             return res.status(401).json({message:"Incorrect Authentication"})
@@ -21,6 +23,8 @@ export const auth =  (
             // @ts-ignore 
             // The above comment effectively ignores the potential error typescript is trying to warn us about
             res.locals.jwtData = decodedInfo.Id
+            // @ts-ignore 
+            console.log(decodedInfo.Id)
             return next();
         }
     }
