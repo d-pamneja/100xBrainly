@@ -13,7 +13,7 @@ export const GoogleButton = ({ text }: GoogleButtonProps) => {
   const size = isSmall ? "sm" : isMedium ? "md" : "lg"
 
   const handleGoogleSignIn = () => {
-    window.location.href = "http://localhost:3001/auth/google";
+    window.location.href = "https://100x-brainly.vercel.app:3001/auth/google";
   };
 
   return (

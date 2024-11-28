@@ -77,9 +77,8 @@ export const login = async function(
 
             res.cookie(COOKIE_NAME, token, {
                 path: "/",
-                domain: "localhost",
+                domain: "100x-brainly.vercel.app",
                 expires,
-                httpOnly: true,
                 signed: true,
                 secure : true
             });

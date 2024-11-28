@@ -40,14 +40,14 @@ thridPartyRouter.get(
 
       res.cookie(COOKIE_NAME, token, {
           path: "/",
-          domain: "localhost",
+          domain: "100x-brainly.vercel.app",
           expires,
           httpOnly: true,
           signed: true,
           secure : true
       });
 
-      res.redirect('http://localhost:5173/home');
+      res.redirect('https://100x-brainly.vercel.app/home');
     } catch (error) {
       console.error('Google callback error:', error);
       res.status(500).json({ message: 'Internal server error.' });
@@ -86,14 +86,14 @@ thridPartyRouter.get(
 
       res.cookie(COOKIE_NAME, token, {
           path: "/",
-          domain: "localhost",
+          domain: "100x-brainly.vercel.app",
           expires,
           httpOnly: true,
           signed: true,
           secure : true
       });
 
-      res.redirect('http://localhost:5173/home');
+      res.redirect('https://100x-brainly.vercel.app/home');
     } catch (error) {
       console.error('Github callback error:', error);
       res.status(500).json({ message: 'Internal server error.' });
