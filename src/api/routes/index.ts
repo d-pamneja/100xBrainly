@@ -8,7 +8,7 @@ const appRouter = Router()
 
 appRouter.get('/', (req, res) => {
     console.log("Trial")
-    res.status(200).json({ message: "Hello from 100xBrainly Backend!" });
+    res.status(200).send("Trial");
 });
 appRouter.use('/user',userRouter)
 appRouter.use('/content',contentRouter)
