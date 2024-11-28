@@ -7,6 +7,7 @@ import thridPartyRouter from "./auth";
 const appRouter = Router()
 
 appRouter.get('/', (req, res) => {
+    console.log("Trial")
     res.status(200).json({ message: "Hello from 100xBrainly Backend!" });
 });
 appRouter.use('/user',userRouter)
