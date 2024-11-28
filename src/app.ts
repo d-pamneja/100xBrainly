@@ -5,7 +5,6 @@ import cookieParser from "cookie-parser";
 import session from 'express-session';
 import passport from 'passport'
 import './middlewares/passport'
-import morgan from "morgan"
 import cors from "cors";
 import serverless from 'serverless-http';
 
