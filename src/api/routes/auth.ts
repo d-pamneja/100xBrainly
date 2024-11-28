@@ -40,11 +40,9 @@ thridPartyRouter.get(
 
       res.cookie(COOKIE_NAME, token, {
           path: "/",
-          domain: "100x-brainly.vercel.app",
           expires,
-          httpOnly: true,
           signed: true,
-          secure : true
+          secure: true
       });
 
       res.redirect('https://100x-brainly.vercel.app/home');
@@ -86,11 +84,9 @@ thridPartyRouter.get(
 
       res.cookie(COOKIE_NAME, token, {
           path: "/",
-          domain: "100x-brainly.vercel.app",
           expires,
-          httpOnly: true,
           signed: true,
-          secure : true
+          secure: true
       });
 
       res.redirect('https://100x-brainly.vercel.app/home');

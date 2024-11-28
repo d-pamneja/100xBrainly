@@ -77,10 +77,9 @@ export const login = async function(
 
             res.cookie(COOKIE_NAME, token, {
                 path: "/",
-                domain: "100x-brainly-backend.vercel.app",
                 expires,
                 signed: true,
-                secure : true
+                secure: true
             });
 
             return res.status(200).json({message:`${username} has been successfully logged in.`,id:response._id.toString()})
