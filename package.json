@@ -2,7 +2,7 @@
   "name": "secondbrain_project",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/index.js",
+  "main": "index.js",
   "scripts": {
     "build": "tsc -b",
     "start": "node dist/index.js",
