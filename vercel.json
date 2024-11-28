@@ -3,7 +3,7 @@
     "builds": [
       {
         "src": "frontend/package.json",
-        "use": "react"
+        "use": "@vercel/react"
       },
       {
         "src": "backend/src/app.ts",
