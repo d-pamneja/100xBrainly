@@ -1,27 +1,26 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "frontend/package.json",
-        "use": "@vercel/react"
-      },
-      {
-        "src": "backend/src/app.ts",
-        "use": "@vercel/node",
-        "config": {
-          "maxDuration": 10
-        }
+  "version": 2,
+  "builds": [
+    {
+      "src": "frontend/package.json",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "backend/src/app.ts",
+      "use": "@vercel/node",
+      "config": {
+        "maxDuration": 10
       }
-    ],
-    "routes": [
-      {
-        "src": "/api/(.*)",
-        "dest": "backend/src/app.ts"
-      },
-      {
-        "src": "/(.*)",
-        "dest": "/frontend/$1"
-      }
-    ]
-  }
-  
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "backend/src/app.ts"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/frontend/$1"
+    }
+  ]
+}
