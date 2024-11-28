@@ -32,5 +32,12 @@ app.use(express.json())
 app.use(cookieParser(process.env.COOKIE_SECRET));
 app.use('/',appRouter)
 
+// Connect to MongoDB first
+connect(process.env.MONGODB_URI!)
+  .then(() => {
+    console.log("Server set and connected to MongoDB.");
+  })
+  .catch((err) => console.log("MongoDB connection error: ", err));
+  
 module.exports.handler = serverless(app);
 export default app;
