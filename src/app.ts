@@ -25,7 +25,7 @@ app.use(
 );
 app.use(passport.initialize())
 app.use(passport.session()) 
-app.use(cors({ origin: "100x-brainly.vercel.app", credentials: true }));
+app.use(cors({ origin: "https://100x-brainly.vercel.app", credentials: true }));
 app.use(express.json())
 app.use(cookieParser(process.env.COOKIE_SECRET));
 app.use('/',appRouter)

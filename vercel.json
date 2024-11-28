@@ -6,5 +6,5 @@
         "dest": "dist/index.js"
       }
     ],
-    "outputDirectory" : ""
+    "outputDirectory" : "dist"
   }
