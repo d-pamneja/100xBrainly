@@ -33,11 +33,6 @@ app.use(cookieParser(process.env.COOKIE_SECRET));
 app.use('/',appRouter)
 
 
-// connect to mongoDB (make sure you wait the call, as app should only run when the connection is made)
-connect(process.env.MONGODB_URI!).then(() => {
-        console.log("Server opened and connected to MongoDB.");
-    }).catch(err=>console.log(err))
 
-// Export the app for serverless environments
-module.exports.handler = serverless(app); // Optional, depends on how you deploy
+module.exports.handler = serverless(app);
 export default app;

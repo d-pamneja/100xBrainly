@@ -1,11 +1,7 @@
- {
+{
     "version": 2,
     "routes": [
-      {
-        "src": "/src/api/(.*)", 
-        "dest": "/dist/api/$1"
-      }
-    ],
-    "outputDirectory": ""
+      { "src": "/api/(.*)", "dest": "/dist/api/$1" }
+    ]
   }
   
