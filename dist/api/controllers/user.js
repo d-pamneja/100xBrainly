@@ -53,14 +53,14 @@ const login = async function (req, res) {
             const token = jsonwebtoken_1.default.sign({
                 Id: response._id.toString()
             }, JWT_SECRET);
-            const oldToken = req.cookies[`${constants_1.COOKIE_NAME}`];
+            const oldToken = req.signedCookies[`${constants_1.COOKIE_NAME}`];
             if (oldToken) {
                 res.clearCookie(constants_1.COOKIE_NAME);
             }
             const expiresInMilliseconds = 7 * 24 * 60 * 60 * 1000;
             const expires = new Date(Date.now() + expiresInMilliseconds);
             res.cookie(constants_1.COOKIE_NAME, token, {
-                domain: "https://100x-brainly.vercel.app",
+                domain: "100x-brainly.vercel.app",
                 expires,
                 signed: true,
                 secure: true
