@@ -23,7 +23,7 @@ thridPartyRouter.get('/google/callback', passport_1.default.authenticate('google
         const token = jsonwebtoken_1.default.sign({
             Id: user._id.toString()
         }, JWT_SECRET);
-        const oldToken = req.signedCookies[`${constants_1.COOKIE_NAME}`];
+        const oldToken = req.cookies[`${constants_1.COOKIE_NAME}`];
         if (oldToken) {
             res.clearCookie(constants_1.COOKIE_NAME);
         }
