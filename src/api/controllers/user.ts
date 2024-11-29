@@ -79,7 +79,7 @@ export const login = async function(
                 domain: "100x-brainly.vercel.app",
                 expires,
                 httpOnly: true,
-                signed: true,
+                signed: false,
                 secure: true
             });
 

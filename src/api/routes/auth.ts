@@ -42,7 +42,7 @@ thridPartyRouter.get(
           domain: "100x-brainly.vercel.app",
           expires,
           httpOnly: true,
-          signed: true,
+          signed: false,
           secure: true
       });
 
@@ -87,7 +87,7 @@ thridPartyRouter.get(
           domain: "100x-brainly.vercel.app",
           expires,
           httpOnly: true,
-          signed: true,
+          signed: false,
           secure: true
       });
 

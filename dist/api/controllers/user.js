@@ -63,7 +63,7 @@ const login = async function (req, res) {
                 domain: "100x-brainly.vercel.app",
                 expires,
                 httpOnly: true,
-                signed: true,
+                signed: false,
                 secure: true
             });
             return res.status(200).json({ message: `${username} has been successfully logged in.`, id: response._id.toString() });
