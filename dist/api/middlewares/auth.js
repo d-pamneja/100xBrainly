@@ -11,7 +11,7 @@ const JWT_SECRET = process.env.JWT_SECRET;
 const constants_1 = require("../../utils/constants");
 const auth = (req, res, next) => {
     try {
-        const requestAuthorization = req.cookies[`${constants_1.COOKIE_NAME}`];
+        const requestAuthorization = req.signedCookies[`${constants_1.COOKIE_NAME}`];
         const decodedInfo = jsonwebtoken_1.default.verify(requestAuthorization, JWT_SECRET);
         if (!decodedInfo) {
             return res.status(401).json({ message: "Incorrect Authentication" });
