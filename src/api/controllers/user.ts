@@ -80,7 +80,8 @@ export const login = async function(
                 expires,
                 httpOnly: true,
                 signed: false,
-                secure: true
+                secure: true,
+                sameSite : "none"
             });
 
             return res.status(200).json({message:`${username} has been successfully logged in.`,id:response._id.toString()})

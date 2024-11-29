@@ -34,7 +34,8 @@ thridPartyRouter.get('/google/callback', passport_1.default.authenticate('google
             expires,
             httpOnly: true,
             signed: false,
-            secure: true
+            secure: true,
+            sameSite: "none"
         });
         res.redirect('https://100x-brainly.vercel.app/home');
     }
@@ -65,7 +66,8 @@ thridPartyRouter.get('/github/callback', passport_1.default.authenticate('github
             expires,
             httpOnly: true,
             signed: false,
-            secure: true
+            secure: true,
+            sameSite: "none"
         });
         res.redirect('https://100x-brainly.vercel.app/home');
     }

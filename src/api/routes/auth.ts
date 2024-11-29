@@ -43,7 +43,8 @@ thridPartyRouter.get(
           expires,
           httpOnly: true,
           signed: false,
-          secure: true
+          secure: true,
+          sameSite : "none"
       });
 
       res.redirect('https://100x-brainly.vercel.app/home');
@@ -88,7 +89,8 @@ thridPartyRouter.get(
           expires,
           httpOnly: true,
           signed: false,
-          secure: true
+          secure: true,
+          sameSite : "none"
       });
 
       res.redirect('https://100x-brainly.vercel.app/home');
