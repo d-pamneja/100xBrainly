@@ -33,7 +33,7 @@ thridPartyRouter.get('/google/callback', passport_1.default.authenticate('google
             domain: "100x-brainly-backend.vercel.app",
             expires,
             httpOnly: true,
-            signed: false,
+            signed: true,
             secure: true,
             sameSite: "none"
         });
@@ -65,7 +65,7 @@ thridPartyRouter.get('/github/callback', passport_1.default.authenticate('github
             domain: "100x-brainly-backend.vercel.app",
             expires,
             httpOnly: true,
-            signed: false,
+            signed: true,
             secure: true,
             sameSite: "none"
         });
