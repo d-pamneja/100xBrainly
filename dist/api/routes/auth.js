@@ -32,6 +32,7 @@ thridPartyRouter.get('/google/callback', passport_1.default.authenticate('google
         res.cookie(constants_1.COOKIE_NAME, token, {
             domain: "100x-brainly.vercel.app",
             expires,
+            httpOnly: true,
             signed: true,
             secure: true
         });
@@ -62,6 +63,7 @@ thridPartyRouter.get('/github/callback', passport_1.default.authenticate('github
         res.cookie(constants_1.COOKIE_NAME, token, {
             domain: "100x-brainly.vercel.app",
             expires,
+            httpOnly: true,
             signed: true,
             secure: true
         });
