@@ -7,8 +7,9 @@ export const userRouter = Router()
 
 // The as any syntax is called a type assertion and effectively turns off type checking for the specific parameter. Basically, we are calling this assertion as we will not pass the parameters for middlewares mannually
 userRouter.post('/signup',checkCredentials as any,signUp) 
-userRouter.post('/login',checkCredentials as any,login)
-userRouter.get('/logout',auth as any,logout)
-userRouter.get('/auth-status',auth as any,verifyUser) 
+userRouter.post('/login',login)
+userRouter.use(auth as any)
+userRouter.get('/logout',logout)
+userRouter.get('/auth-status',verifyUser) 
 
 export default userRouter

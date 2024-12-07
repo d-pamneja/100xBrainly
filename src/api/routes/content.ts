@@ -4,10 +4,11 @@ import { addContent, deleteContent, getAllTags, editContent,viewContent } from "
 
 const contentRouter = Router()
 
-contentRouter.post('/addContent',auth as any,addContent)
-contentRouter.get('/getTags',auth as any, getAllTags)
-contentRouter.get('/viewContent',auth as any,viewContent)
-contentRouter.put('/updateContent',auth as any,editContent)
-contentRouter.delete('/deleteContent',auth as any,deleteContent)
+contentRouter.use(auth as any)
+contentRouter.post('/addContent',addContent)
+contentRouter.get('/getTags', getAllTags)
+contentRouter.get('/viewContent',viewContent)
+contentRouter.put('/updateContent',editContent)
+contentRouter.delete('/deleteContent',deleteContent)
 
 export default contentRouter

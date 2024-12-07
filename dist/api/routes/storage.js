@@ -1,0 +1,14 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.storageRouter = void 0;
+const express_1 = require("express");
+const auth_1 = require("../middlewares/auth");
+const storage_1 = require("../controllers/storage");
+exports.storageRouter = (0, express_1.Router)();
+exports.storageRouter.use(auth_1.auth);
+exports.storageRouter.get('/getObject', storage_1.getObject);
+exports.storageRouter.post('/setObject', storage_1.setObject);
+exports.storageRouter.post('/setObjectPinecone', storage_1.setObjectPinecone);
+exports.storageRouter.delete('/removeObject', storage_1.removeObject);
+exports.storageRouter.delete('/removeObjectPinecone', storage_1.removeObjectPinecone);
+exports.default = exports.storageRouter;

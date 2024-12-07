@@ -32,7 +32,9 @@ app.use((0, cookie_parser_1.default)(process.env.COOKIE_SECRET));
 app.use('/', routes_1.default);
 (0, mongoose_1.connect)(process.env.MONGODB_URI)
     .then(() => {
-    console.log("Server set and connected to MongoDB.");
+    app.listen(3001, () => {
+        console.log("Server set and connected to MongoDB.");
+    });
 })
     .catch((err) => console.log("MongoDB connection error: ", err));
 exports.default = app;

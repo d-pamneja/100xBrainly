@@ -4,9 +4,11 @@ import { shareLink, viewLink,linkStatus } from "../controllers/sharing";
 
 export const shareRouter = Router()
 
-shareRouter.get('/linkStatus',auth as any,linkStatus)
-shareRouter.post('/shareBrain',auth as any,shareLink)
+
 shareRouter.get('/viewBrain/:username/:uid',viewLink)
+shareRouter.use(auth as any)
+shareRouter.get('/linkStatus',linkStatus)
+shareRouter.post('/shareBrain',shareLink)
 
 export default shareRouter
 

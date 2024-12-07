@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.queryRouter = void 0;
+const express_1 = require("express");
+const auth_1 = require("../middlewares/auth");
+const query_1 = require("../controllers/query");
+exports.queryRouter = (0, express_1.Router)();
+exports.queryRouter.use(auth_1.auth);
+exports.queryRouter.post('/document', query_1.sendDocQuery);
+exports.default = exports.queryRouter;

@@ -1,3 +1,5 @@
 # Ignore Files
 node_modules
 .env
+.env.local
+100xbrainlyAPI_credentials.csv
