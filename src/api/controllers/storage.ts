@@ -123,7 +123,7 @@ export const setObjectPinecone = async (req : Request, res: Response) : Promise<
     try {
         const { file_url, type, key,userID } = req.body;
         
-        const pineconeUpload = await fetch(`${aiMindURL}/storeDoc`,{
+        const pineconeUpload = await fetch(`${aiMindURL}/aimind/storeDoc`,{
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json', 
@@ -185,7 +185,7 @@ export const removeObjectPinecone = async (req : Request, res: Response) : Promi
     try {
         const key = req.query.key as string
         
-        const pineconeDeletion = await fetch(`${aiMindURL}/deleteDoc`,{
+        const pineconeDeletion = await fetch(`${aiMindURL}/aimind/deleteDoc`,{
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json', 

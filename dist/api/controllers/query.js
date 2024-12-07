@@ -14,7 +14,7 @@ const sendDocQuery = async (req, res) => {
             const user_query = requestBody.user_query;
             const userID = requestBody.userID;
             const key = requestBody.key;
-            const response = await fetch(`${aiMindURL}/chat`, {
+            const response = await fetch(`${aiMindURL}/aimind/chat`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

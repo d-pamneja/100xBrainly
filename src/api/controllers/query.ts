@@ -13,7 +13,7 @@ export const sendDocQuery = async (req:Request, res:Response) : Promise<any> =>{
             const userID = requestBody.userID
             const key = requestBody.key
             
-            const response = await fetch(`${aiMindURL}/chat`, {
+            const response = await fetch(`${aiMindURL}/aimind/chat`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json', 

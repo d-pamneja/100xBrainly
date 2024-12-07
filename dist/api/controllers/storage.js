@@ -110,7 +110,7 @@ exports.setObject = setObject;
 const setObjectPinecone = async (req, res) => {
     try {
         const { file_url, type, key, userID } = req.body;
-        const pineconeUpload = await fetch(`${aiMindURL}/storeDoc`, {
+        const pineconeUpload = await fetch(`${aiMindURL}/aimind/storeDoc`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -167,7 +167,7 @@ exports.removeObject = removeObject;
 const removeObjectPinecone = async (req, res) => {
     try {
         const key = req.query.key;
-        const pineconeDeletion = await fetch(`${aiMindURL}/deleteDoc`, {
+        const pineconeDeletion = await fetch(`${aiMindURL}/aimind/deleteDoc`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',
