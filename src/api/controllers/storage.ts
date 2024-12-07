@@ -9,7 +9,7 @@ const aiMindURL = process.env.AI_MIND_URL
 const s3Client = new S3Client({
     region : 'ap-south-1',
     credentials : {
-        accessKeyId : process.env.AWS_ACCESS_KEY!,
+        accessKeyId : process.env.AWS_ACCESSABLE_KEY!,
         secretAccessKey : process.env.AWS_SECRET_ACCESS_KEY!,
     }
 })
