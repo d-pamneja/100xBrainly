@@ -24,7 +24,7 @@ app.use((0, express_session_1.default)({
 app.use(passport_1.default.initialize());
 app.use(passport_1.default.session());
 app.use((0, cors_1.default)({
-    origin : ["https://100x-brainly.vercel.app"],
+    origin : true,
     credentials: true,
     methods: "*",
     allowedHeaders: "*"
