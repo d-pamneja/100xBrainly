@@ -30,9 +30,7 @@ app.use(passport.initialize())
 app.use(passport.session()) 
 app.use(cors({
     origin : true,
-    credentials: true,
-    methods: "*",
-    allowedHeaders: "*",
+    credentials: true
   }));
 app.use(express.json())
 app.use(cookieParser(process.env.COOKIE_SECRET));
