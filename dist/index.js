@@ -24,7 +24,7 @@ app.use((0, express_session_1.default)({
 app.use(passport_1.default.initialize());
 app.use(passport_1.default.session());
 app.use((0, cors_1.default)({
-    origin : true,
+    origin: true,
     credentials: true
 }));
 app.use(express_1.default.json());
@@ -32,9 +32,7 @@ app.use((0, cookie_parser_1.default)(process.env.COOKIE_SECRET));
 app.use('/', routes_1.default);
 (0, mongoose_1.connect)(process.env.MONGODB_URI)
     .then(() => {
-    app.listen(3001, () => {
-        console.log("Server set and connected to MongoDB.");
-    });
+    console.log("Server set and connected to MongoDB.");
 })
     .catch((err) => console.log("MongoDB connection error: ", err));
 exports.default = app;
